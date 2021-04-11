@@ -1,3 +1,10 @@
+# This is the R script used to study the impact of (B1, B2) (Figure 1 in [TF21])
+# 'mat' and 'mat1' record the MMS of RaSE-BIC and RaSE_1-BIC under different (B1, B2) settings, respectively
+# [TF21] sets seed = 1:200, then take the median in each (B1, B2) settings to plot Figure 1
+#
+# Reference:
+# [TF21] Tian, Y. and Feng, Y., 2021. RaSE: A Variable Screening Framework via Random Subspace Ensembles. arXiv preprint arXiv:2102.03892.
+#
 
 library(RaSEn)
 library(screening)
@@ -7,7 +14,7 @@ library(e1071)
 library(dplyr)
 library(SIS)
 
-
+set.seed(seed, kind = "L'Ecuyer-CMRG")
 cores <- detectCores()
 
 # -----------------------------------------------------

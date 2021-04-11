@@ -1,3 +1,11 @@
+# This is the R script used to compare the performance of various screening methods in two real studies in [TF21]
+# 'v.list' records the order of p features provided by different methods.
+# 'v.list[[1]]' and 'v.list[[2]]' represent results of two real studies in [TF21], respectively
+# [TF21] sets seed = 1:200, then calculate the median MMS to obtain the results in Table 5.
+#
+# Reference:
+# [TF21] Tian, Y. and Feng, Y., 2021. RaSE: A Variable Screening Framework via Random Subspace Ensembles. arXiv preprint arXiv:2102.03892.
+#
 
 library(RaSEn)
 library(screening)
@@ -14,6 +22,7 @@ library(doParallel)
 library(EDMeasure)
 
 
+set.seed(seed, kind = "L'Ecuyer-CMRG")
 cores <- detectCores()
 
 
