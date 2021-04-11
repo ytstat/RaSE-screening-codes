@@ -7,4 +7,4 @@ run command
 ```
 install.packages("../RaSEn_2.1.0.tar.gz", type = "source", repos = NULL)
 ```
-(replace .. with your own path) in R/RStudio.
+(replace .. with your own path) in R/RStudio to finish installation.
